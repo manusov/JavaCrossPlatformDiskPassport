@@ -1,0 +1,23 @@
+DOS платформа, IDEDUMP v003.
+”тилита сохранени€ информации ATA-устройства дл€ DOS.
+ƒобавлена процедура чтени€ данных SMART THRESHOLDS.
+–азмер результирующего двоичного файла увеличен до 1536 байт.
+512 байт = результат команды IDENTIFY DEVICE
+512 байт = результат команды SMART READ DATA
+512 байт = результат команды SMART READ WARRANTY FAILURE THRESHOLDS.
+PRIMMAST.EXE = верси€ дл€ Primary Master, порты 01F0h/0376h.
+F070F062.EXE = специальна€ верси€ дл€ AMD-стенда, порты F070h/F062h.
+
+»зменение касаетс€ метода получени€ пороговых значений параметров
+(Thresholds). ≈сли устройство нар€ду с командой
+SMART READ DATA (кодируетс€ как Feature=D0h, Command=B0h)
+поддерживает команду
+SMART READ WARRANTY FAILURE THRESHOLDS (Feature=D1h, Command=B0h)
+то в качестве источника параметра Threshold следует использовать
+не байт 12 основного атрибута, как было определено ранее, а блок,
+полученный в результате выполнени€ команды 
+SMART READ WARRANTY FAILURE THRESHOLDS
+ѕоэтому размер выходного блока утилиты IDEDUMP увеличиваетс€ до 1536 байт:
+512 байт = Result of IDENTIFY DEVICE (Passport)
+512 байт = Result SMART READ DATA
+512 байт = Result SMART READ WARRANTY ATTRIBUTE THRESHOLDS.

@@ -1,0 +1,5 @@
+Дамп Passport+SMART диска SSD Hynix.
+Дамп сделан на платформе, поддерживающей только SATA1 1.5 Gbit/s,
+поэтому Current Signaling Speed is Gen1 1.5 Gb/s,
+в списке поддерживаемых диском режимов присутствуют
+Gen1, Gen2, Gen3.
