@@ -115,7 +115,7 @@ DiskPassport() {
     
 //--- Copyright label ---
     JLabel  l1 = new JLabel  ("(C)2018  IC Book Labs");
-    JLabel  l2 = new JLabel  ("v0.10");
+    JLabel  l2 = new JLabel  ("v0.11");
     l1.setForeground(Color.GRAY);
     l2.setForeground(Color.GRAY);
     Font font1 = new Font ("Verdana", Font.PLAIN, 10);
